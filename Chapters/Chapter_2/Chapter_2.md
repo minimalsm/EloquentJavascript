@@ -1,4 +1,4 @@
-## 2.1 Looping a triangle
+###### 2.1 Looping a triangle
 
 ```javascript
 const triangleLoop = () => {
@@ -8,7 +8,7 @@ const triangleLoop = () => {
 }
 ```
 
-## 2.2 FizzBuzz
+###### 2.2 FizzBuzz
 Immediate solution
 ```javascript
 const fizzBuzz = () => {
@@ -37,5 +37,3 @@ const fizzBuzzTwo = () => {
   }
 }
 ```
-
-fizzBuss()
