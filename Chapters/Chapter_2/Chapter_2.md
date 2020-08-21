@@ -55,4 +55,3 @@ const chessBoard = (size = 8) => {
   console.log(str)
 }
 ```
-
