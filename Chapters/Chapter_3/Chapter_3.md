@@ -1,4 +1,4 @@
-# Chapter 2
+# Chapter 3
 
 ## 3.1 Minimum
 ```javascript
