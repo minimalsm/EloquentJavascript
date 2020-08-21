@@ -29,7 +29,7 @@ const countBs = (word) => (
 const countChar = (word, char) => {
   let count = 0;
 
-  for (let i = 0; i < word .length; i++) {
+  for (let i = 0; i < word.length; i++) {
     if (word [i] == char) count++;
   }
 
