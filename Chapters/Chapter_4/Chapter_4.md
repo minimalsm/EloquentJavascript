@@ -1,7 +1,6 @@
 # Chapter 4
 
 ## 4.1 The sum of a range
-
 ```javascript
 const range = (start, end, step = 1) => {
   const nums = []
@@ -23,5 +22,23 @@ const sum = (numbers) => {
   }
 
   return total
+}
+```
+
+## 4.2 Reversing an Array
+```javascript
+const reverseArray = (arr) => {
+  const output = []
+  for (let el in arr) {
+    output.unshift(arr[el])
+  }
+  return output
+}
+
+const reverseArrayInPlace = (arr) => {
+  for (let i = 0; i < Math.floor(arr.length / 2); i++) {
+    [arr[i], arr[arr.length - 1 - i]] = [arr[arr.length - 1 - i], arr[i]]
+  }
+  return arr
 }
 ```
