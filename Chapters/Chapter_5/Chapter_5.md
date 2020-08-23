@@ -16,3 +16,23 @@ const loop = (start, test, update, body) => {
   }
 }
 ```
+
+## 5.3 Everything
+```javascript
+const everyForOfLoop = (arr, condition) => {
+  let output = true
+  for (let element of arr) {
+    if (!condition(element)) return output = false
+  }
+  return output
+}
+
+const everyForLoop = (arr, condition) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (!condition(arr[i])) return false
+  }
+  return true
+}
+
+const everySome = (arr, condition) => !arr.some((el) => !condition(el))
+```
