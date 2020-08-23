@@ -38,7 +38,6 @@ const everySome = (arr, condition) => !arr.some((el) => !condition(el))
 ```
 
 ## 5.4 Dominant writing direction
-
 ```javascript
 function characterScript(code) {
   for (let script of SCRIPTS) {
