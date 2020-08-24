@@ -77,3 +77,10 @@ class GroupIterator {
   }
 }
 ```
+
+## 6.4 Borrowing a method
+```javascript
+let map = {one: true, two: true, hasOwnProperty: true};
+
+console.log(Object.prototype.hasOwnProperty.call(map, "one"));
+```
