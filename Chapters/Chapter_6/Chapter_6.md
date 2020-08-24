@@ -47,3 +47,33 @@ class Group {
   }
 }
 ```
+
+## 6.3 Iterable groups
+
+```javascript
+Group.prototype[Symbol.iterator] = function() {
+  return new GroupIterator(this);
+};
+
+//Instead of the above, this could be added to the
+//Group class to set it's iterator 
+  // [Symbol.iterator]() {
+  //   return new GroupIterator(this);
+  // }
+
+class GroupIterator {
+  constructor(group) {
+    this.i = 0
+    this.group = group;
+  }
+
+  next() {
+    if (this.i === this.group.collection.length) return { done: true }
+
+    let value = this.group.collection[this.i]
+    this.i++
+
+    return { value, done: false }
+  }
+}
+```
