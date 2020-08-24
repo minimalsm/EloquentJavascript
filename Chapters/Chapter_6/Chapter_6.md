@@ -22,3 +22,28 @@ class Vec {
   }
 }
 ```
+
+## 6.2 Groups
+```javascript
+class Group {
+  constructor() {
+    this.collection = []
+  }
+  delete(item) {
+    this.collection = this.collection.filter((el) => el != item)
+  }
+  add(item) {
+    this.has(item) ? null : this.collection.push(item)
+  }
+  has(item) {
+    return this.collection.includes(item)
+  }
+  static from(collection) {
+    let group = new Group
+    for (let element of collection) {
+      group.add(element)
+    }
+    return group
+  }
+}
+```
