@@ -49,7 +49,6 @@ class Group {
 ```
 
 ## 6.3 Iterable groups
-
 ```javascript
 Group.prototype[Symbol.iterator] = function() {
   return new GroupIterator(this);
