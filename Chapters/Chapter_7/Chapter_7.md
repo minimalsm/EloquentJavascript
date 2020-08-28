@@ -14,7 +14,7 @@ function compareRobots(robot1, memory1, robot2, memory2) {
 
   let averageRouteRobotTurns = totalRouteRobotTurns / turns
   let averageGoalRobotTurns = totalGoalRobotTurns / turns
-  console.log(`Route robot took average took ${averageRouteRobotTurns} turns`)
+  console.log(`Route robot on average took ${averageRouteRobotTurns} turns`)
   console.log(`Goal oriented robot on average took ${averageGoalRobotTurns} turns`)
 }
 
