@@ -47,3 +47,30 @@ function myRobot({place, parcels}, route) {
   return {direction: route[0], memory: route.slice(1)};
 }
 ```
+
+## 7.3 Persistent Group
+```javascript
+class PGroup {
+  constructor(collection) {
+    this.collection = collection
+  }
+  delete(item) {
+    if (!this.has(item)) return this;
+    return new PGroup(this.collection.filter((el) => el != item))
+  }
+  add(item) {
+    if (this.has(item)) return this;
+    return new PGroup(this.collection.concat([item]));
+  }
+  has(item) {
+    return this.collection.includes(item)
+  }
+  static from(collection) {
+    let group = new Group
+    for (let element of collection) {
+      group.add(element)
+    }
+    return group
+  }
+}
+```
