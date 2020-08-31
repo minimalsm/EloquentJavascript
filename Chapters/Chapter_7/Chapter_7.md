@@ -1,6 +1,6 @@
 # Chapter 7
 
-## Measuring A Robot
+## 7.1 Measuring A Robot
 ```javascript
 function compareRobots(robot1, memory1, robot2, memory2) {
   const turns = 100
@@ -28,4 +28,22 @@ function countTurns(state, robot, memory) {
 }
 
 compareRobots(routeRobot, [], goalOrientedRobot, []);
+```
+
+## 7.2 Robot efficiency
+```javascript
+function myRobot({place, parcels}, route) {
+  if (route.length == 0) {
+    let routes = parcels.map(parcel => {
+      if (parcel.place != place) {
+        return {route: findRoute(roadGraph, place, parcel.place)};
+      } else {
+        return {route: findRoute(roadGraph, place, parcel.address)};
+      }
+    })
+    
+    route = routes.reduce((a, b) => b.route.length < a.route.length ? a : b).route
+  }
+  return {direction: route[0], memory: route.slice(1)};
+}
 ```
